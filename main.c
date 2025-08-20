@@ -30,7 +30,7 @@ int Divide(int a, int b) { //Divide function
 
 void AskUserNumber() {
     //Ask user for numbers
-    printf("Please enter two number: ");
+    printf("\nPlease enter two number: ");
     scanf("%d%d", &a, &b);
 }
 
@@ -42,26 +42,29 @@ void AskUserNumber() {
 }
 
 int main() {
-    AskUserNumber(); //Call function
 
-    printf("Your numbers are %d and %d\n", a, b);
+    while (1) {
+        AskUserNumber(); //Call function
 
-    AskUserFunction(); //Call function
+        printf("Your numbers are %d and %d\n", a, b);
 
-    printf("Your choice was: %d\n", choice);
+        AskUserFunction(); //Call function
 
-    switch (choice) {
-        case 1:
-            printf("Your answer is: %d\n", Add(a, b));
-            break;
-        case 2:
-            printf("Your answer is: %d\n", Subtract(a, b));
-            break;
-        case 3:
-            printf("Your answer is: %d\n", Multiply(a, b));
-            break;
-        case 4:
-            printf("Your answer is: %d\n", Divide(a, b));
-            break;
+        printf("Your choice was: %d\n", choice);
+
+        switch (choice) {
+            case 1:
+                printf("Your answer is: %d\n", Add(a, b));
+                break;
+            case 2:
+                printf("Your answer is: %d\n", Subtract(a, b));
+                break;
+            case 3:
+                printf("Your answer is: %d\n", Multiply(a, b));
+                break;
+            case 4:
+                printf("Your answer is: %d\n", Divide(a, b));
+                break;
+        }
     }
 }
