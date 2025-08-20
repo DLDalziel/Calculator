@@ -36,18 +36,32 @@ void AskUserNumber() {
 
     void AskUserFunction() {
     //Ask user for function
-    printf("What would you like to do: \n");
+    printf("\nWhat would you like to do: \n");
     printf("1.Add\n2.Subtract\n3.Multiply\n4.Divide\n"); //Choices
     scanf("%d", &choice);
 }
 
 int main() {
-
     AskUserNumber(); //Call function
 
     printf("Your numbers are %d and %d\n", a, b);
 
     AskUserFunction(); //Call function
 
-    printf("Choice: %d", choice);
+    printf("Your choice was: %d\n", choice);
+
+    switch (choice) {
+        case 1:
+            printf("Your answer is: %d\n", Add(a, b));
+            break;
+        case 2:
+            printf("Your answer is: %d\n", Subtract(a, b));
+            break;
+        case 3:
+            printf("Your answer is: %d\n", Multiply(a, b));
+            break;
+        case 4:
+            printf("Your answer is: %d\n", Divide(a, b));
+            break;
+    }
 }
